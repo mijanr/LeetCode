@@ -20,11 +20,28 @@ class Solution:
         >>> Solution().productExceptSelf([-1,1,0,-3,3])
         [0, 0, 9, 0, 0]
         """
-        result = []
+        prefix = []
+        suffix = []
         for i in range(len(nums)):
-            lst = nums[:i] + nums[i+1:]
-            result.append(reduce(lambda x, y: x*y, lst))
-        return result
+            if i == 0:
+                prefix.append(nums[i])
+            else:
+                prefix.append(prefix[i-1]*nums[i])
+        for i in range(len(nums)-1, -1, -1):
+            if i == len(nums)-1:
+                suffix.append(nums[i])
+            else:
+                suffix.append(suffix[-1]*nums[i])
+        suffix.reverse()
+        res = []
+        for i in range(len(nums)):
+            if i == 0:
+                res.append(suffix[i+1])
+            elif i == len(nums)-1:
+                res.append(prefix[i-1])
+            else:
+                res.append(prefix[i-1]*suffix[i+1])
+        return res
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
