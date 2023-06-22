@@ -7,6 +7,7 @@ Problem Description: Given an unsorted integer array nums, return the smallest m
 
 You must implement an algorithm that runs in O(n) time and uses constant extra space.
 """
+import doctest
 from typing import List
 
 class Solution:
@@ -27,5 +28,4 @@ class Solution:
             ans +=1 
 
 if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
+    doctest.testmod(verbose=True)
