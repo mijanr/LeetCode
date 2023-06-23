@@ -11,6 +11,7 @@ Note that in some languages, such as Java, there is no unsigned integer type. In
 In Java, the compiler represents the signed integers using 2's complement notation. Therefore, in Example 3, the input represents the signed integer. -3.
 """
 
+
 class Solution:
     def hammingWeight(self, n: int) -> int:
         """
@@ -21,8 +22,10 @@ class Solution:
         >>> Solution().hammingWeight(11111111111111111111111111111101)
         31
         """
-        return bin(n).count('1')
+        return bin(n).count("1")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     import doctest
+
     doctest.testmod()

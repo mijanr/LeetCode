@@ -10,6 +10,7 @@ You must implement an algorithm that runs in O(n) time and uses constant extra s
 import doctest
 from typing import List
 
+
 class Solution:
     def firstMissingPositive(self, nums: List[int]) -> int:
         """
@@ -25,7 +26,8 @@ class Solution:
         while True:
             if ans not in hashSet:
                 return ans
-            ans +=1 
+            ans += 1
+
 
 if __name__ == "__main__":
     doctest.testmod(verbose=True)

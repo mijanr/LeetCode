@@ -9,6 +9,8 @@ An Anagram is a word or phrase formed by rearranging the letters of a different 
 """
 
 from typing import List
+
+
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         """
@@ -28,8 +30,8 @@ class Solution:
                 hashMap[tp].append(st)
         return list(hashMap.values())
 
+
 if __name__ == "__main__":
     import doctest
-    doctest.testmod()
-        
 
+    doctest.testmod()

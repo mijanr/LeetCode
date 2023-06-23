@@ -7,6 +7,8 @@ Problem Description: Given an integer n, return an array ans of length n + 1 suc
 """
 
 from typing import List
+
+
 class Solution:
     def countBits(self, n: int) -> List[int]:
         """
@@ -15,8 +17,10 @@ class Solution:
         >>> Solution().countBits(5)
         [0, 1, 1, 2, 1, 2]
         """
-        return [bin(i)[2:].count('1') for i in range(n+1)]
+        return [bin(i)[2:].count("1") for i in range(n + 1)]
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     import doctest
+
     doctest.testmod()

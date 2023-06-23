@@ -12,23 +12,26 @@ The tests are generated such that there is exactly one solution. You may not use
 Your solution must use only constant extra space.
 """
 from typing import List
+
+
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         hashMap = {}
         for idx, num in enumerate(numbers):
             if num not in hashMap:
-                hashMap[target-num] = idx+1
+                hashMap[target - num] = idx + 1
             else:
-                return [hashMap[num], idx+1]
+                return [hashMap[num], idx + 1]
         return []
 
-if __name__=="__main__":
-    numbers_1 = [2,7,11,15]
-    target_1 = 9 # [1,2]
-    numbers_2 = [2,3,4]
-    target_2 = 6 # [1,3]    
-    numbers_3 = [-1,0]
-    target_3 = -1 # [1,2]
+
+if __name__ == "__main__":
+    numbers_1 = [2, 7, 11, 15]
+    target_1 = 9  # [1,2]
+    numbers_2 = [2, 3, 4]
+    target_2 = 6  # [1,3]
+    numbers_3 = [-1, 0]
+    target_3 = -1  # [1,2]
     print(Solution().twoSum(numbers_1, target_1))
     print(Solution().twoSum(numbers_2, target_2))
     print(Solution().twoSum(numbers_3, target_3))

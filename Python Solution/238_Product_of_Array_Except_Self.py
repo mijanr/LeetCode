@@ -12,6 +12,8 @@ You must write an algorithm that runs in O(n) time and without using the divisio
 """
 from typing import List
 from functools import reduce
+
+
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         """
@@ -26,22 +28,25 @@ class Solution:
             if i == 0:
                 prefix.append(nums[i])
             else:
-                prefix.append(prefix[i-1]*nums[i])
-        for i in range(len(nums)-1, -1, -1):
-            if i == len(nums)-1:
+                prefix.append(prefix[i - 1] * nums[i])
+        for i in range(len(nums) - 1, -1, -1):
+            if i == len(nums) - 1:
                 suffix.append(nums[i])
             else:
-                suffix.append(suffix[-1]*nums[i])
+                suffix.append(suffix[-1] * nums[i])
         suffix.reverse()
         res = []
         for i in range(len(nums)):
             if i == 0:
-                res.append(suffix[i+1])
-            elif i == len(nums)-1:
-                res.append(prefix[i-1])
+                res.append(suffix[i + 1])
+            elif i == len(nums) - 1:
+                res.append(prefix[i - 1])
             else:
-                res.append(prefix[i-1]*suffix[i+1])
+                res.append(prefix[i - 1] * suffix[i + 1])
         return res
+
+
 if __name__ == "__main__":
     import doctest
+
     doctest.testmod()

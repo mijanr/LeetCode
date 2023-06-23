@@ -13,19 +13,21 @@ Those numbers for which this process ends in 1 are happy.
 Return true if n is a happy number, and false if not.
 """
 
+
 class Solution:
     def isHappy(self, n: int) -> bool:
         hashSet = set()
-        while n!=1:
+        while n != 1:
             if n in hashSet:
                 return False
             hashSet.add(n)
-            n = sum(int(i)**2 for i in str(n))
+            n = sum(int(i) ** 2 for i in str(n))
         return True
 
+
 if __name__ == "__main__":
-    n_1 = 19 # True
-    n_2 = 2 # False
+    n_1 = 19  # True
+    n_2 = 2  # False
 
     print(Solution().isHappy(n_1))
     print(Solution().isHappy(n_2))

@@ -8,6 +8,8 @@ Problem Description: Given an integer array nums, in which exactly two elements 
 You must write an algorithm that runs in linear runtime complexity and uses only constant extra space.
 """
 from typing import List
+
+
 class Solution:
     def singleNumber(self, nums: List[int]) -> List[int]:
         hashMap = {}
@@ -16,12 +18,13 @@ class Solution:
                 hashMap[num] = 1
             else:
                 hashMap[num] += 1
-        return [key for key, val in hashMap.items() if val==1]
+        return [key for key, val in hashMap.items() if val == 1]
+
 
 if __name__ == "__main__":
-    nums_1 = [1,2,1,3,2,5] # Output: [3,5]
-    nums_2 = [-1,0] # Output: [-1,0]
-    nums_3 = [0,1] # Output: [1,0]
+    nums_1 = [1, 2, 1, 3, 2, 5]  # Output: [3,5]
+    nums_2 = [-1, 0]  # Output: [-1,0]
+    nums_3 = [0, 1]  # Output: [1,0]
     solution = Solution()
     for nums in [nums_1, nums_2, nums_3]:
         print(solution.singleNumber(nums))
