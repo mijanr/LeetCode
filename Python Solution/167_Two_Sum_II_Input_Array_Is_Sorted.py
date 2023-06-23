@@ -12,6 +12,7 @@ The tests are generated such that there is exactly one solution. You may not use
 Your solution must use only constant extra space.
 """
 from typing import List
+import doctest
 
 
 class Solution:
@@ -35,7 +36,8 @@ class Solution:
 
 
 if __name__ == "__main__":
-    """numbers_1 = [2, 7, 11, 15]
+    """
+    numbers_1 = [2, 7, 11, 15]
     target_1 = 9  # [1,2]
     numbers_2 = [2, 3, 4]
     target_2 = 6  # [1,3]
@@ -43,8 +45,6 @@ if __name__ == "__main__":
     target_3 = -1  # [1,2]
     print(Solution().twoSum(numbers_1, target_1))
     print(Solution().twoSum(numbers_2, target_2))
-    print(Solution().twoSum(numbers_3, target_3))"""
-
-    import doctest
-
+    print(Solution().twoSum(numbers_3, target_3))
+    """
     doctest.testmod(verbose=True)
