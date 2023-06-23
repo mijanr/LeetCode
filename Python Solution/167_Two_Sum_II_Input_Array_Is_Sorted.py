@@ -16,6 +16,15 @@ from typing import List
 
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        """
+        >>>Solution().twoSum([2,7,11,15], 9)
+        [1, 2]
+        >>>Solution().twoSum([2,3,4], 6)
+        [1, 3]
+        >>>Solution().twoSum([-1,0], -1)
+        [1, 2]
+
+        """
         hashMap = {}
         for idx, num in enumerate(numbers):
             if num not in hashMap:
@@ -26,7 +35,7 @@ class Solution:
 
 
 if __name__ == "__main__":
-    numbers_1 = [2, 7, 11, 15]
+    """numbers_1 = [2, 7, 11, 15]
     target_1 = 9  # [1,2]
     numbers_2 = [2, 3, 4]
     target_2 = 6  # [1,3]
@@ -34,4 +43,8 @@ if __name__ == "__main__":
     target_3 = -1  # [1,2]
     print(Solution().twoSum(numbers_1, target_1))
     print(Solution().twoSum(numbers_2, target_2))
-    print(Solution().twoSum(numbers_3, target_3))
+    print(Solution().twoSum(numbers_3, target_3))"""
+
+    import doctest
+
+    doctest.testmod(verbose=True)
