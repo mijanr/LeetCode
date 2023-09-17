@@ -24,9 +24,6 @@ class Solution:
           return False
         if str(x)==str(x)[::-1]:
           return True
-        else:
-          return False
-
-
+        return False
 if __name__ == "__main__":
     doctest.testmod(verbose=True)
