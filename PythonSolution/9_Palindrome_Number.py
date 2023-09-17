@@ -20,7 +20,12 @@ class Solution:
         >>> Solution().isPalindrome(-101)
         False
         """
-        return str(x) == str(x)[::-1]
+        if x<0:
+          return False
+        if str(x)==str(x)[::-1]:
+          return True
+        else:
+          return False
 
 
 if __name__ == "__main__":
