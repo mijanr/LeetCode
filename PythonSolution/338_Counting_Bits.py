@@ -17,7 +17,16 @@ class Solution:
         >>> Solution().countBits(5)
         [0, 1, 1, 2, 1, 2]
         """
-        return [bin(i)[2:].count("1") for i in range(n + 1)]
+        # return [bin(i)[2:].count("1") for i in range(n + 1)]
+        nums = [i for i in range(n + 1)]
+        ans = []
+        for num in nums:
+            count = 0
+            while num:
+                count += num & 1
+                num >>= 1
+            ans.append(count)
+        return ans
 
 
 if __name__ == "__main__":
