@@ -22,7 +22,11 @@ class Solution:
         >>> Solution().hammingWeight(11111111111111111111111111111101)
         31
         """
-        return bin(n).count("1")
+        count = 0
+        while n:
+            count += n & 1
+            n >>= 1
+        return count
 
 
 if __name__ == "__main__":
