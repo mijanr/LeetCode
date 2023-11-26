@@ -27,3 +27,5 @@ if __name__ == '__main__':
 
 Most of the solutions in this repository have doctests integrated into them.
 
+## Requirements
+All the solutions should work with Python 3.8 or higher. I am using Python 3.11. If something changes, I will update this section.
